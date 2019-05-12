@@ -154,7 +154,7 @@ class SimpleModal extends React.Component {
             <Grid container justify="center" 
                       alignItems="center" 
                       direction="row" 
-                      spacing="32"
+                      justify="space-evenly"
                       className={classes.grid}>
               <Grid item>
                 <Fab onClick={this.handleOK} 
