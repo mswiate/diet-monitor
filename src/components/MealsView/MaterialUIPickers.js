@@ -5,16 +5,16 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, TimePicker, DatePicker } from 'material-ui-pickers';
+import Paper from '@material-ui/core/Paper';
 
 const styles = {
   grid: {
-    width: '60%',
+    width: '30%',
   },
 };
 
 class MaterialUIPickers extends React.Component {
   state = {
-    // The first commit of Material-UI
     selectedDate: new Date('2014-08-18T21:11:54'),
   };
 
@@ -28,20 +28,29 @@ class MaterialUIPickers extends React.Component {
 
     return (
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <Grid container justify="flex-start" alignItems="center" direction="row" className={classes.grid} justify="space-around">
-          <DatePicker
-            margin="normal"
-            label="Date picker"
-            value={selectedDate}
-            direction="row"
-            onChange={this.handleDateChange}
-          />
-          <TimePicker
-            margin="normal"
-            label="Time picker"
-            value={selectedDate}
-            onChange={this.handleDateChange}
-          />
+        <Grid container justify="center" 
+                        alignItems="center" 
+                        direction="row" 
+                        className={classes.grid}>
+          
+          <Grid item>
+            <DatePicker
+              margin="normal"
+              label="Date picker"
+              value={selectedDate}
+              direction="row"
+              onChange={this.handleDateChange}
+            />
+          </Grid>
+          <Grid item>
+            <TimePicker
+              margin="normal"
+              label="Time picker"
+              direction="row"
+              value={selectedDate}
+              onChange={this.handleDateChange}
+            />
+          </Grid>
         </Grid>
       </MuiPickersUtilsProvider>
     );

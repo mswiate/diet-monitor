@@ -116,7 +116,7 @@ class SimpleModal extends React.Component {
           open={this.props.showModalAddMeal}
         >
           <DialogTitle id="customized-dialog-title" onClose={this.handleClose}>
-            Posilek
+            Posiłek
           </DialogTitle>
           <DialogContent>
             <List component="nav">
